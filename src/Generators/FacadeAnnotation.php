@@ -70,6 +70,7 @@ class FacadeAnnotation
 
     /**
      * @param  ReflectionMethod  $method
+     * @return string|null
      */
     protected function getReturnType(ReflectionMethod $method): ?string
     {
