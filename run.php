@@ -31,7 +31,6 @@ $app->singleton(Illuminate\Contracts\Console\Kernel::class, Gdl2Studio\IdeHelper
 
 $app->singleton(Illuminate\Contracts\Debug\ExceptionHandler::class, Gdl2Studio\IdeHelper\Exceptions\Handler::class);
 
-
 /*
 |--------------------------------------------------------------------------
 | Run The Artisan Application
@@ -54,6 +53,3 @@ $status = $kernel->handle(
 $kernel->terminate($input, $status);
 
 exit($status);
-
-
-

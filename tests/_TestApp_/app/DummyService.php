@@ -4,7 +4,7 @@ namespace TestApp;
 
 class DummyService
 {
-    public function provideMeSomething():string
+    public function provideMeSomething(): string
     {
         return 'SOMETHING';
     }

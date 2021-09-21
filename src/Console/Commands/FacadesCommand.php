@@ -21,6 +21,7 @@ class FacadesCommand extends Command
                 ->getParsedFacades()
                 ->whenNotEmpty(function ($facades) {
                     $this->info('Annotations generated for:');
+
                     return $facades;
                 })->each(function ($annotation, $facade) {
                     if ($this->option('write')) {
@@ -30,10 +31,8 @@ class FacadesCommand extends Command
                         $this->line($annotation.PHP_EOL, null, 2);
                     }
                 });
-
         } catch (Exception $e) {
             $this->error($e->getMessage());
         }
-
     }
 }

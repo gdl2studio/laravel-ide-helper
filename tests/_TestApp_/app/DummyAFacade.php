@@ -5,9 +5,9 @@ namespace TestApp;
 use Illuminate\Support\Facades\Facade;
 
 /**
-**
+ **
  * This is a DummyAFacade class annotation
- * this class helps do things using DummyA class
+ * this class helps do things using DummyA class.
  */
 class DummyAFacade extends Facade
 {
