@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Facade;
 
 /**
  * @see \Gdl2Studio\IdeHelper\IdeHelper
+ *
  * @method static static cleanUpAppFacades()
  * @method static \Illuminate\Support\Collection getAppFacades()
  * @method static \Illuminate\Support\Collection getParsedFacades()

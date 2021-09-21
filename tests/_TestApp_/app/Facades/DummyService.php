@@ -4,8 +4,6 @@ namespace TestApp\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-
-
 class DummyService extends Facade
 {
     /**

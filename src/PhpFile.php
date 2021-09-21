@@ -81,7 +81,6 @@ class PhpFile
         $this->parseClassAnnotations($contents);
     }
 
-
     public function updateClassAnnotation(string $annotation, bool $write = true): string
     {
         $oldAnnotation = $this->classAnnotation;
@@ -110,7 +109,6 @@ class PhpFile
         );
     }
 
-
     public function cleanUpClassAnnotation(bool $write = true): string
     {
         if ($this->classAnnotation) {
@@ -135,7 +133,6 @@ class PhpFile
         return '';
     }
 
-
     public function isFacade(): bool
     {
         return FacadeAnnotation::isFacade($this->getFQCN());
@@ -152,7 +149,6 @@ class PhpFile
         );
     }
 
-
     protected function parseClassAnnotations(string $contents): string
     {
         if (preg_match('/(\/\*\*((?!\*\/).)*\*\/)\s+class\s+'.$this->definedClass.'(\s|\{)/Uis', $contents, $m)) {
@@ -163,7 +159,6 @@ class PhpFile
 
         return $this->classAnnotation;
     }
-
 
     protected function parseDefinedClass(string $contents): string
     {

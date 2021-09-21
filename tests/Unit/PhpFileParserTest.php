@@ -85,17 +85,16 @@ class PhpFileParserTest extends TestCase
 
         $original = $phpFile->getContents();
         $modified = $phpFile->updateFacadeAnnotation(true);
-        $cleaned  = $phpFile->cleanUpClassAnnotation(true);
+        $cleaned = $phpFile->cleanUpClassAnnotation(true);
         // dump($original, $modified, $cleaned);
         $this->assertNotEquals($original, $modified);
         $this->assertEquals($original, $cleaned);
-
 
         $phpFile = PhpFile::make(app_path('/DummyAFacade.php'));
 
         $original = $phpFile->getContents();
         $modified = $phpFile->updateFacadeAnnotation(true);
-        $cleaned  = $phpFile->cleanUpClassAnnotation(true);
+        $cleaned = $phpFile->cleanUpClassAnnotation(true);
         //dump($original, $modified, $cleaned);
         $this->assertNotEquals($original, $modified);
         $this->assertEquals($original, $cleaned);

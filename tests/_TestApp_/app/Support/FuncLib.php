@@ -4,5 +4,4 @@ namespace TestApp\Support;
 
 function DummyFunction()
 {
-
 }

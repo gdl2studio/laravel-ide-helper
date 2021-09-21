@@ -5,7 +5,6 @@ namespace Gdl2Studio\IdeHelper;
 use Gdl2Studio\IdeHelper\Console\Commands\FacadesCommand;
 use Illuminate\Support\ServiceProvider;
 
-
 class IdeHelperServiceProvider extends ServiceProvider
 {
     /**
@@ -17,9 +16,9 @@ class IdeHelperServiceProvider extends ServiceProvider
             // $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'idehelper');
             // $this->publishes([ __DIR__.'/../config/config.php' => config_path('idehelper.php') ], 'config');
 
-             $this->commands([
-                 FacadesCommand::class
-             ]);
+            $this->commands([
+                FacadesCommand::class,
+            ]);
         }
     }
 
@@ -39,7 +38,7 @@ class IdeHelperServiceProvider extends ServiceProvider
     }
 
     /**
-     * Checks if running in local console environment
+     * Checks if running in local console environment.
      */
     protected function runningInLocalConsoleEnv(): bool
     {

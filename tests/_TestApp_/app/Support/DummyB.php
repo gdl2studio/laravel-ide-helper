@@ -13,14 +13,14 @@ namespace TestApp\Support;
  * some other comment
  */
 
-# this is comment too .,,,
+// this is comment too .,,,
 
 use TestApp\DummyBase;
 
-# just use it
+// just use it
 
 /**
- *  This is a DummyB class annotation
+ *  This is a DummyB class annotation.
  *
  *  this class helps do things
  */

@@ -24,6 +24,7 @@ abstract class TestCase extends BaseTestCase
         if ($this->environment) {
             $app->detectEnvironment(fn () => $this->environment);
         }
+
         return [
             IdeHelperServiceProvider::class,
         ];

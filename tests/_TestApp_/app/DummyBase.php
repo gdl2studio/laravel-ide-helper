@@ -26,6 +26,7 @@ class DummyBase
     {
         echo $this->publicProperty.PHP_EOL;
         echo 'Doing '.$job.'...'.PHP_EOL;
+
         return $this;
     }
 

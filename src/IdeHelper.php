@@ -19,20 +19,21 @@ class IdeHelper
     public function withNoWrite(): static
     {
         $this->write = false;
+
         return $this;
     }
 
-    public function withWrite(bool $write=true): static
+    public function withWrite(bool $write = true): static
     {
         $this->write = $write;
+
         return $this;
     }
-
 
     public function parseAppFacades(): static
     {
         $this->parsedFacades = $this->getAppFacades()->map(
-            fn(PhpFile $phpFile) => $phpFile->updateFacadeAnnotation($this->write)
+            fn (PhpFile $phpFile) => $phpFile->updateFacadeAnnotation($this->write)
         );
 
         return $this;
@@ -41,12 +42,11 @@ class IdeHelper
     public function cleanUpAppFacades(): static
     {
         $this->parsedFacades = $this->getAppFacades()->map(
-            fn(PhpFile $phpFile) => $phpFile->cleanUpClassAnnotation($this->write)
+            fn (PhpFile $phpFile) => $phpFile->cleanUpClassAnnotation($this->write)
         );
 
         return $this;
     }
-
 
     public function getAppFacades(): Collection
     {
@@ -62,10 +62,8 @@ class IdeHelper
         return $facades;
     }
 
-
     public function getParsedFacades(): Collection
     {
         return $this->parsedFacades;
     }
-
 }

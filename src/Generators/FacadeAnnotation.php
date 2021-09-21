@@ -2,7 +2,6 @@
 
 namespace Gdl2Studio\IdeHelper\Generators;
 
-
 use Illuminate\Support\Facades\Facade;
 use ReflectionClass;
 use ReflectionException;
@@ -28,12 +27,12 @@ class FacadeAnnotation
     /**
      * @throws ReflectionException
      */
-    static function make(string $className): static
+    public static function make(string $className): static
     {
         return new static(static::isFacade($className) ? get_class(($className)::getFacadeRoot()) : $className);
     }
 
-    static function isFacade(string $className): bool
+    public static function isFacade(string $className): bool
     {
         return is_subclass_of($className, Facade::class);
     }
@@ -41,14 +40,14 @@ class FacadeAnnotation
     /**
      * @throws ReflectionException
      */
-    function generate(): string
+    public function generate(): string
     {
         $methods = $this->accessorReflectionClass->getMethods();
 
         $annotations = [];
 
         foreach ($methods as $method) {
-            if (!$method->isConstructor() and $method->isPublic() and !$method->isStatic()) {
+            if (! $method->isConstructor() and $method->isPublic() and ! $method->isStatic()) {
                 $annotations[$method->getName().' '.$this->processParameters($method->getParameters())] = $this->arrayToString([
                     ' * @method static',
                     $this->getReturnType($method).
@@ -65,8 +64,7 @@ class FacadeAnnotation
     }
 
     /**
-     * @param ReflectionMethod $method
-     *
+     * @param  ReflectionMethod  $method
      * @return string|null
      */
     protected function getReturnType(ReflectionMethod $method): ?string
@@ -82,14 +80,14 @@ class FacadeAnnotation
     }
 
     /**
-     * @param ReflectionParameter[] $parameters
-     *
+     * @param  ReflectionParameter[]  $parameters
      * @return string
+     *
      * @throws ReflectionException
      */
     protected function processParameters(array $parameters): string
     {
-        $output       = [];
+        $output = [];
         $processValue = function (mixed $value) {
             return var_export($value, true);
         };
@@ -97,25 +95,24 @@ class FacadeAnnotation
         foreach ($parameters as $parameter) {
             if ($parameter->isOptional()) {
                 if ($parameter->isDefaultValueConstant()) {
-                    $output[] = (string)$parameter->getType().' $'.$parameter->getName().' = '.$parameter->getDefaultValueConstantName();
+                    $output[] = (string) $parameter->getType().' $'.$parameter->getName().' = '.$parameter->getDefaultValueConstantName();
                 } else {
-                    $output[] = (string)$parameter->getType().' $'.$parameter->getName().' = '.$processValue($parameter->getDefaultValue());
+                    $output[] = (string) $parameter->getType().' $'.$parameter->getName().' = '.$processValue($parameter->getDefaultValue());
                 }
             } else {
-                $output[] = (string)$parameter->getType().' $'.$parameter->getName();
+                $output[] = (string) $parameter->getType().' $'.$parameter->getName();
             }
         }
+
         return '('.implode(', ', $output).')';
     }
 
     /**
-     * @param array $array
-     *
+     * @param  array  $array
      * @return string
      */
     protected function arrayToString(array $array): string
     {
         return implode(' ', $array);
     }
-
 }

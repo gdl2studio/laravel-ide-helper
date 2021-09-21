@@ -3,7 +3,6 @@
 namespace Gdl2Studio\IdeHelper\Exceptions;
 
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
-
 use Throwable;
 
 class Handler extends ExceptionHandler
@@ -31,5 +30,4 @@ class Handler extends ExceptionHandler
         //var_dump($exception);
         parent::report($exception);
     }
-
 }
