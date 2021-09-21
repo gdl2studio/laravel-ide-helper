@@ -12,11 +12,8 @@ public/storage
 public/hot
 
 .phpunit.result.cache
-bootstrap/cache/
 storage/*.key
-storage/logs/
 .env
-tests/_TestApp_/storage/logs/
 
 Homestead.yaml
 Homestead.json

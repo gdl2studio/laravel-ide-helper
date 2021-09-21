@@ -34,7 +34,7 @@ return [
         /*
          * Package Service Providers...
          */
-        \Gdl2Studio\IdeHelper\IdeHelperServiceProvider::class
+        \Gdl2Studio\IdeHelper\IdeHelperServiceProvider::class,
 
     ],
 

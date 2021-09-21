@@ -1,11 +1,12 @@
 {
-  "name": "gdl2studio/idehelper",
+  "name": "gdl2studio/laravel-ide-helper",
   "description": "Annotation makes you free!",
   "keywords": [
     "gdl2studio",
-    "idehelper"
+    "laravel",
+    "ide helper"
   ],
-  "homepage": "https://github.com/gdl2studio/idehelper",
+  "homepage": "https://github.com/gdl2studio/laravel-ide-helper",
   "license": "MIT",
   "type": "library",
   "authors": [
