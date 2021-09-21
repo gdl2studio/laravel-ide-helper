@@ -1,4 +1,0 @@
-[2021-09-13 13:03:56] testing.ERROR: Cannot use array as default value for property TestApp\DummyBase::$className of type string {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot use array as default value for property TestApp\\DummyBase::$className of type string at E:\\www\\laravel\\packages\\Gdl2Studio\\IdeHelper\\tests\\_TestApp_\\app\\DummyBase.php:8)
-[stacktrace]
-#0 {main}
-"} 
