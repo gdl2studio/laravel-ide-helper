@@ -8,6 +8,9 @@ use ReflectionException;
 use ReflectionMethod;
 use ReflectionParameter;
 
+/**
+ * @author Ardzz Jay Steve <https://github.com/ardzz>
+ */
 class FacadeAnnotation
 {
     //private ReflectionClass $facadeReflectionClass;
@@ -38,6 +41,8 @@ class FacadeAnnotation
     }
 
     /**
+     * Generates facade annotations.
+     *
      * @throws ReflectionException
      */
     public function generate(): string
@@ -59,13 +64,12 @@ class FacadeAnnotation
 
         ksort($annotations);
 
-        return ' * @see \\'.$this->accessorReflectionClass->getName().PHP_EOL.
+        return ' * @see \\'.$this->accessorReflectionClass->getName().PHP_EOL.PHP_EOL.
             implode(PHP_EOL, $annotations).PHP_EOL;
     }
 
     /**
      * @param  ReflectionMethod  $method
-     * @return string|null
      */
     protected function getReturnType(ReflectionMethod $method): ?string
     {
@@ -80,6 +84,8 @@ class FacadeAnnotation
     }
 
     /**
+     * Processes parameters of a method.
+     *
      * @param  ReflectionParameter[]  $parameters
      * @return string
      *
@@ -88,6 +94,7 @@ class FacadeAnnotation
     protected function processParameters(array $parameters): string
     {
         $output = [];
+
         $processValue = function (mixed $value) {
             return var_export($value, true);
         };
@@ -95,12 +102,12 @@ class FacadeAnnotation
         foreach ($parameters as $parameter) {
             if ($parameter->isOptional()) {
                 if ($parameter->isDefaultValueConstant()) {
-                    $output[] = (string) $parameter->getType().' $'.$parameter->getName().' = '.$parameter->getDefaultValueConstantName();
+                    $output[] = $parameter->getType().' $'.$parameter->getName().' = '.$parameter->getDefaultValueConstantName();
                 } else {
-                    $output[] = (string) $parameter->getType().' $'.$parameter->getName().' = '.$processValue($parameter->getDefaultValue());
+                    $output[] = $parameter->getType().' $'.$parameter->getName().' = '.$processValue($parameter->getDefaultValue());
                 }
             } else {
-                $output[] = (string) $parameter->getType().' $'.$parameter->getName();
+                $output[] = $parameter->getType().' $'.$parameter->getName();
             }
         }
 

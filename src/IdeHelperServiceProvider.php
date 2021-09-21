@@ -13,9 +13,6 @@ class IdeHelperServiceProvider extends ServiceProvider
     public function boot()
     {
         if ($this->runningInLocalConsoleEnv()) {
-            // $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'idehelper');
-            // $this->publishes([ __DIR__.'/../config/config.php' => config_path('idehelper.php') ], 'config');
-
             $this->commands([
                 FacadesCommand::class,
             ]);
@@ -28,10 +25,7 @@ class IdeHelperServiceProvider extends ServiceProvider
     public function register()
     {
         if ($this->runningInLocalConsoleEnv()) {
-            // Automatically apply the package configuration
-            // $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'idehelper');
-
-            $this->app->singleton('gdl2studio.ide-helper', function () {
+            $this->app->singleton('gdl2studio.laravel-ide-helper', function () {
                 return new IdeHelper;
             });
         }

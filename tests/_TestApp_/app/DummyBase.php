@@ -5,6 +5,7 @@ namespace TestApp;
 class DummyBase
 {
     public string|null $publicProperty = 'Hello, Dummy Base!';
+
     protected string|null $className = '';
 
     public function __construct()

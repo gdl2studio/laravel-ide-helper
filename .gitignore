@@ -11,7 +11,7 @@ app/storage/
 public/storage
 public/hot
 
-.phpunit.result.cache
+*.cache
 storage/*.key
 .env
 

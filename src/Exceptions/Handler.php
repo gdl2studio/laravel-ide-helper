@@ -20,14 +20,13 @@ class Handler extends ExceptionHandler
     /**
      * Report or log an exception.
      *
-     * @param  \Throwable  $exception
+     * @param  \Throwable  $e
      * @return void
      *
-     * @throws \Exception
+     * @throws Throwable
      */
-    public function report(Throwable $exception)
+    public function report(Throwable $e)
     {
-        //var_dump($exception);
-        parent::report($exception);
+        parent::report($e);
     }
 }

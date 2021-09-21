@@ -31,7 +31,7 @@ class PhpFile
         $this->parse();
     }
 
-    public static function make(SplFileInfo|string $file, string|null $appPath = null): PhpFile
+    public static function make(SplFileInfo|string $file, string|null $appPath = null): self
     {
         return new static($file, $appPath);
     }
@@ -58,14 +58,31 @@ class PhpFile
 
     public function getClassAnnotationBody(): string
     {
-        return preg_replace('/^\s*\//', '',
-            preg_replace('/(\s|\*)+$/is', '',
-                preg_replace('/\r\n((\h|\r)*\n)+/is', PHP_EOL,
-                    preg_replace('/^\h*\*\h*@(method|see).*$/mi', '',
-                        preg_replace('/\s*\*\/\s*$/i', '',
-                            preg_replace('/^\s*\/\*+(\s)*'.PHP_EOL.'/i', '',
+        return preg_replace(
+            '/^\s*\//',
+            '',
+            preg_replace(
+                '/(\s|\*)+$/is',
+                '',
+                preg_replace(
+                    '/\r\n((\h|\r)*\n)+/is',
+                    PHP_EOL,
+                    preg_replace(
+                        '/^\h*\*\h*@(method|see).*$/mi',
+                        '',
+                        preg_replace(
+                            '/\s*\*\/\s*$/i',
+                            '',
+                            preg_replace(
+                                '/^\s*\/\*+(\s)*'.PHP_EOL.'/i',
+                                '',
                                 $this->classAnnotation
-                            ))))));
+                            )
+                        )
+                    )
+                )
+            )
+        );
     }
 
     public function getContents(): string
@@ -93,17 +110,23 @@ class PhpFile
 
         return $this->setContents(
         // leave no empty lines between annotation and class definition
-            preg_replace('/(\*\/)\s*(class\s+'.$this->definedClass.')/Uis', '\1'.PHP_EOL.'\2',
+            preg_replace(
+                '/(\*\/)\s*(class\s+'.$this->definedClass.')/Uis',
+                '\1'.PHP_EOL.'\2',
                 $oldAnnotation ?
                     // replace old annotation
-                    str_replace($oldAnnotation,
+                    str_replace(
+                        $oldAnnotation,
                         $this->classAnnotation,
-                        $this->getContents())
+                        $this->getContents()
+                    )
                     :
                     // insert new annotation
-                    preg_replace('/^(\s*class\s+'.$this->definedClass.')/mi',
+                    preg_replace(
+                        '/^(\s*class\s+'.$this->definedClass.')/mi',
                         PHP_EOL.PHP_EOL.$this->classAnnotation.'\1',
-                        $this->getContents())
+                        $this->getContents()
+                    )
             ),
             $write
         );
@@ -120,11 +143,14 @@ class PhpFile
                 '';
 
             return $this->setContents(
-                preg_replace('/(\*\/)\s*(class\s+'.$this->definedClass.')/Uis',
+                preg_replace(
+                    '/(\*\/)\s*(class\s+'.$this->definedClass.')/Uis',
                     '\1'.PHP_EOL.'\2',
-                    str_replace($oldAnnotations,
+                    str_replace(
+                        $oldAnnotations,
                         $this->classAnnotation,
-                        $this->getContents())
+                        $this->getContents()
+                    )
                 ),
                 $write
             );
@@ -185,7 +211,9 @@ class PhpFile
     protected function removeComments(string $str): string
     {
         return
-            preg_replace('/\/\*.*\*\//Uis', '',
+            preg_replace(
+                '/\/\*.*\*\//Uis',
+                '',
                 preg_replace('/(\/\/|#).*'.PHP_EOL.'/', PHP_EOL, $str)
             );
     }

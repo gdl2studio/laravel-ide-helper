@@ -23,6 +23,6 @@ class IdeHelper extends Facade
      */
     protected static function getFacadeAccessor(): string
     {
-        return 'gdl2studio.ide-helper';
+        return 'gdl2studio.laravel-ide-helper';
     }
 }
