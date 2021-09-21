@@ -1,0 +1,50 @@
+{
+  "name": "gdl2studio/idehelper",
+  "description": "Annotation makes you free!",
+  "keywords": [
+    "gdl2studio",
+    "idehelper"
+  ],
+  "homepage": "https://github.com/gdl2studio/idehelper",
+  "license": "MIT",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Jakub Kwaśniewski",
+      "email": "jakub@zero-85.pl",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^8.0",
+    "illuminate/support": "^8.0"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^6.0",
+    "phpunit/phpunit": "^9.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Gdl2Studio\\IdeHelper\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Gdl2Studio\\IdeHelper\\Tests\\": "tests",
+      "TestApp\\": "tests/_TestApp_/app/"
+    }
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Gdl2Studio\\IdeHelper\\IdeHelperServiceProvider"
+      ],
+      "aliases": {
+        "IdeHelper": "Gdl2Studio\\IdeHelper\\IdeHelperFacade"
+      }
+    }
+  }
+}

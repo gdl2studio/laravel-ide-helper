@@ -1,0 +1,11 @@
+php:
+  preset: laravel
+  version: 8
+js:
+  finder:
+    not-name:
+      - webpack.mix.js
+css: true
+
+disabled:
+  - single_class_element_per_statement
