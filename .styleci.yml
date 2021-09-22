@@ -1,6 +1,6 @@
 risky: false
 version: 8
-enable:
+enabled:
   - laravel_phpdoc_alignment
 finder:
   exclude:
