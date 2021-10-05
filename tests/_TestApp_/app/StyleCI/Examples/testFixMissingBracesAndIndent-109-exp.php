@@ -1,10 +1,8 @@
 <?php
-    if (true)
-    {
+    if (true) {
         // foo
         // bar
-        if (true)
-        {
+        if (true) {
             print("foo");
             print("bar");
         }

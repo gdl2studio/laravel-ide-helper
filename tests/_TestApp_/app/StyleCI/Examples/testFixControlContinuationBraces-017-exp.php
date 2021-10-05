@@ -1,6 +1,8 @@
 <?php
-    class Foo {
-        public function A() {
+    class Foo
+    {
+        public function A()
+        {
             ?>
             Test<?php echo $foobar; ?>Test
             <?php

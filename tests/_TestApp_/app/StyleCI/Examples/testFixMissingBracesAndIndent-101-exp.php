@@ -1,5 +1,6 @@
 <?php
-function foo() {
+function foo()
+{
     $a = $b->{$c->d}($e);
     $f->{$g} = $h;
     $i->{$j}[$k] = $l;

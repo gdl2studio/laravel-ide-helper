@@ -1,6 +1,8 @@
 <?php
-    class Foo {
-        public function getFaxNumbers() {
+    class Foo
+    {
+        public function getFaxNumbers()
+        {
             if (1) {
                 return $this->phoneNumbers->filter(function ($phone) {
                     $a = 1;

@@ -1,6 +1,5 @@
 <?php
-if (1)
-{
+if (1) {
     $message = (new class() extends Foo
     {
         public function bar()

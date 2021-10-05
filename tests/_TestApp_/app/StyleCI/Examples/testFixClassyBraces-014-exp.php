@@ -1,4 +1,5 @@
 <?php
-function foo() {
+function foo()
+{
     return "$c ($d)";
 }

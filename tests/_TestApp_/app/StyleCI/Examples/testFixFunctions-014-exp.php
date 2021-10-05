@@ -1,3 +1,4 @@
 <?php
-    function download() {
+    function download()
+    {
     }

@@ -1,8 +1,6 @@
 <?php
-    if ($foo)
-    {
-    }
-    elseif (
+    if ($foo) {
+    } elseif (
         true === true
         && true === true
     ) {

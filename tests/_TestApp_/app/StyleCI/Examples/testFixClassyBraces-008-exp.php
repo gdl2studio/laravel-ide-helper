@@ -1,3 +1,4 @@
 <?php
-                    class FooA {
+                    class FooA
+                    {
                     }

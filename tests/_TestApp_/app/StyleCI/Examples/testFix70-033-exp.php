@@ -7,6 +7,7 @@
         echo $foo . $bar;
     };
 
-    function a() {
+    function a()
+    {
     }
                 

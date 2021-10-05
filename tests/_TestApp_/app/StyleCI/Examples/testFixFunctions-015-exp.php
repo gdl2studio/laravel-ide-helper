@@ -1,11 +1,15 @@
 <?php
-class Foo {
-    public function AAAA() {
+class Foo
+{
+    public function AAAA()
+    {
     }
 
-    public function BBBB() {
+    public function BBBB()
+    {
     }
 
-    public function CCCC() {
+    public function CCCC()
+    {
     }
 }

@@ -1,5 +1,6 @@
 <?php
-    class Foo {
+    class Foo
+    {
         public $bar;
         public $baz;
     }

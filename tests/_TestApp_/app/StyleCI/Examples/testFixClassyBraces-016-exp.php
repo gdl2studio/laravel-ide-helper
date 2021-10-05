@@ -1,4 +1,5 @@
 <?php
-    trait TFoo {
+    trait TFoo
+    {
         public $a;
     }

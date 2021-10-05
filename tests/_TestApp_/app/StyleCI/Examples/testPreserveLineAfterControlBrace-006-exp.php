@@ -1,10 +1,8 @@
 <?php
-if (true)
-{
+if (true) {
 
     //  The blank line helps with legibility in nested control structures
-    if (true)
-    {
+    if (true) {
         // if body
     }
 

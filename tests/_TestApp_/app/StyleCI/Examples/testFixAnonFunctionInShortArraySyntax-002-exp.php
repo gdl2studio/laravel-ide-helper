@@ -1,5 +1,6 @@
 <?php
-    function myFunction() {
+    function myFunction()
+    {
         return [
             [
                 "callback" => function ($data) {

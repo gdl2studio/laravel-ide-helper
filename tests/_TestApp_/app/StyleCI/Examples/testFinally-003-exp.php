@@ -1,17 +1,10 @@
 <?php
-    try
-    {
+    try {
         throw new \Exception();
-    }
-    catch (\LogicException $e)
-    {
+    } catch (\LogicException $e) {
         // do nothing
-    }
-    catch (\Exception $e)
-    {
+    } catch (\Exception $e) {
         // do nothing
-    }
-    finally
-    {
+    } finally {
         echo "finish!";
     }

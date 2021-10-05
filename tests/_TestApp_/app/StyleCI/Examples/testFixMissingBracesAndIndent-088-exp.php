@@ -1,5 +1,6 @@
 <?php
-    class ClassName {
+    class ClassName
+    {
 
 
 

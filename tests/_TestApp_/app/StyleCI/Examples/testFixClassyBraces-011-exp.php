@@ -1,3 +1,4 @@
 <?php
-                    interface FooD {
+                    interface FooD
+                    {
                     }

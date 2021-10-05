@@ -1,4 +1,5 @@
 <?php
-    function myFunction($foo, $bar) {
+    function myFunction($foo, $bar)
+    {
         return \Foo::{$foo}($bar);
     }

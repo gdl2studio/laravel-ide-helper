@@ -1,7 +1,7 @@
 <?php
 
-function & lambda() {
-    return function ()
-    {
+function & lambda()
+{
+    return function () {
     };
 }

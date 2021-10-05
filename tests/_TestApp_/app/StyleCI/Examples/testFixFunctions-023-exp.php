@@ -1,6 +1,8 @@
 <?php
-class Foo {
-    public static function bar() {
+class Foo
+{
+    public static function bar()
+    {
         return 1;
     }
 }

@@ -1,4 +1,5 @@
 <?php
-function mixedComplex() {
+function mixedComplex()
+{
     $a = $b->{"a{$c->{'foo-bar'}()}d"}();
 }

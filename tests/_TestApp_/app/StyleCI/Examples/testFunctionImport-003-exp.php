@@ -1,5 +1,4 @@
 <?php
     use function Foo\bar;
-    if (true)
-    {
+    if (true) {
     }

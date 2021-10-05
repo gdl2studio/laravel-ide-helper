@@ -1,12 +1,8 @@
 <?php
-    while ($true)
-    {
-        try
-        {
+    while ($true) {
+        try {
             throw new \Exception();
-        }
-        catch (\Exception $e)
-        {
+        } catch (\Exception $e) {
             // do nothing
         }
     }

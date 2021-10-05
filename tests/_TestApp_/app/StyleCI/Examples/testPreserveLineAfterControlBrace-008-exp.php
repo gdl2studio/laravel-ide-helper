@@ -1,5 +1,4 @@
-<?php if (true)
-{
+<?php if (true) {
 
 // CRLF newline
 }

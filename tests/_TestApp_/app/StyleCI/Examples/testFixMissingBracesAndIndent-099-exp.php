@@ -1,4 +1,5 @@
 <?php
-function nested() {
+function nested()
+{
     $a = "a{$b->c()}d";
 }

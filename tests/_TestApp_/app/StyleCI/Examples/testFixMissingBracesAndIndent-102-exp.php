@@ -1,4 +1,5 @@
 <?php
-function mixed() {
+function mixed()
+{
     $a = $b->{"a{$c}d"}();
 }

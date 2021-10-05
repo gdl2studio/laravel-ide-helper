@@ -1,9 +1,6 @@
 <?php
-    if (true)
-    {
+    if (true) {
         $a = 1;
-    }
-    else
-    {
+    } else {
         $b = 2;
     }

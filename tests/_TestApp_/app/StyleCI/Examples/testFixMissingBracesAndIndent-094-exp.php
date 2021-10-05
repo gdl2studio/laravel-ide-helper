@@ -1,4 +1,5 @@
 <?php
-function bar() {
+function bar()
+{
     $a = 1; //comment
 }

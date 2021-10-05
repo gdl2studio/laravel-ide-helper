@@ -1,4 +1,5 @@
 <?php
-    interface Foo {
+    interface Foo
+    {
         public function setConfig(ConfigInterface $config);
     }

@@ -1,9 +1,12 @@
 <?php
-    class Foo {
-        public function use() {
+    class Foo
+    {
+        public function use()
+        {
         }
 
-        public function use1(): string {
+        public function use1(): string
+        {
         }
     }
                 

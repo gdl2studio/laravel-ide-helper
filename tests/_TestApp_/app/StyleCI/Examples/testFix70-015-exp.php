@@ -1,9 +1,11 @@
 <?php
-    function foo($a) {
+    function foo($a)
+    {
         // foo
         $foo = new class($a) extends Foo
         {
-            public function bar() {
+            public function bar()
+            {
             }
         };
     }

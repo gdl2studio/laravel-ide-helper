@@ -1,3 +1,3 @@
 <?php
-$message = (new class() implements FooInterface {
-});
+
+$message = (new class() implements FooInterface {});
