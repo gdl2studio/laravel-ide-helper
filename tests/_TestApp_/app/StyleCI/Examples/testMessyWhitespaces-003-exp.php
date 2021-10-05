@@ -1,16 +1,10 @@
 <?php
-if (true)
-{
-	if (true)
-	{
+if (true) {
+	if (true) {
 		echo 1;
-	}
-	elseif (true)
-	{
+	} elseif (true) {
 		echo 2;
-	}
-	else
-	{
+	} else {
 		echo 3;
 	}
 }
