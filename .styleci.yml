@@ -4,6 +4,8 @@ preset: psr1
 enabled:
 #  - laravel_braces
   - laravel_phpdoc_alignment
+  - laravel_phpdoc_order
+  - laravel_phpdoc_separation
 finder:
   path:
     - "tests"
