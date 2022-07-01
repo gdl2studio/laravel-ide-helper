@@ -4,4 +4,6 @@
  * @property-read string $myMagicReadyProperty
  * @property-write string $myMagicWriteProperty
  */
-class Foo {}
+class Foo
+{
+}

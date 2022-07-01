@@ -14,3 +14,19 @@
 [stacktrace]
 #0 {main}
 "} 
+[2022-07-01 14:54:03] laravel.EMERGENCY: Unable to create configured logger. Using emergency logger. {"exception":"[object] (InvalidArgumentException(code: 0): Log [] is not defined. at E:\\www\\laravel\\packages\\Gdl2Studio\\IdeHelper\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php:192)
+[stacktrace]
+#0 E:\\www\\laravel\\packages\\Gdl2Studio\\IdeHelper\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php(118): Illuminate\\Log\\LogManager->resolve()
+#1 E:\\www\\laravel\\packages\\Gdl2Studio\\IdeHelper\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php(98): Illuminate\\Log\\LogManager->get()
+#2 E:\\www\\laravel\\packages\\Gdl2Studio\\IdeHelper\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php(555): Illuminate\\Log\\LogManager->driver()
+#3 E:\\www\\laravel\\packages\\Gdl2Studio\\IdeHelper\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php(252): Illuminate\\Log\\LogManager->error()
+#4 E:\\www\\laravel\\packages\\Gdl2Studio\\IdeHelper\\vendor\\orchestra\\testbench-core\\src\\Exceptions\\Handler.php(40): Illuminate\\Foundation\\Exceptions\\Handler->report()
+#5 E:\\www\\laravel\\packages\\Gdl2Studio\\IdeHelper\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\HandleExceptions.php(88): Orchestra\\Testbench\\Exceptions\\Handler->report()
+#6 E:\\www\\laravel\\packages\\Gdl2Studio\\IdeHelper\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\HandleExceptions.php(130): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleException()
+#7 [internal function]: Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleShutdown()
+#8 {main}
+"} 
+[2022-07-01 14:54:03] laravel.ERROR: Cannot redeclare TestApp\StyleCI\LaravelBracesFixerTest::provideFixControlContinuationBracesCases() {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot redeclare TestApp\\StyleCI\\LaravelBracesFixerTest::provideFixControlContinuationBracesCases() at E:\\www\\laravel\\packages\\Gdl2Studio\\IdeHelper\\tests\\_TestApp_\\app\\StyleCI\\LaravelBracesFixerTest.php:761)
+[stacktrace]
+#0 {main}
+"} 

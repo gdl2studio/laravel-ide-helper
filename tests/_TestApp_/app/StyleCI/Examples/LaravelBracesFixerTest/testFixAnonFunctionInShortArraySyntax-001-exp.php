@@ -3,12 +3,12 @@
     {
         return [
             [
-                "callback" => function ($data) {
+                'callback' => function ($data) {
                     return true;
                 }
             ],
             [
-                "callback" => function ($data) {
+                'callback' => function ($data) {
                     return true;
                 },
             ],
