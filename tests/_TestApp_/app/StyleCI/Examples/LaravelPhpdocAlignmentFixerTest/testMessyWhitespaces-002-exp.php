@@ -1,7 +1,7 @@
 <?php
 /**
- * @param int    $limit
- * @param string $more
+ * @param  int  $limit
+ * @param  string  $more
  *
  * @return array
  */

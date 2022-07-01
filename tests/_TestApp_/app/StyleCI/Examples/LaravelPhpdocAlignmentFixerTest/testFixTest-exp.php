@@ -1,7 +1,7 @@
 <?php
     /**
-     * @param int         $a
-     * @param string|null $b
+     * @param  int  $a
+     * @param  string|null  $b
      *
      * @dataProvider   dataJobCreation
      */

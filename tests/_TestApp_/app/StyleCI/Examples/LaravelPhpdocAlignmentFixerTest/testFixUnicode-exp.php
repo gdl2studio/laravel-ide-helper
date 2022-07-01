@@ -2,10 +2,10 @@
     /**
      * Method test.
      *
-     * @param int      $foobar Description
-     * @param string   $foo    Description
-     * @param mixed    $bar    Description word_with_ą
-     * @param int|null $test   Description
+     * @param  int  $foobar  Description
+     * @param  string  $foo  Description
+     * @param  mixed  $bar  Description word_with_ą
+     * @param  int|null  $test  Description
      */
     $a = 1;
 

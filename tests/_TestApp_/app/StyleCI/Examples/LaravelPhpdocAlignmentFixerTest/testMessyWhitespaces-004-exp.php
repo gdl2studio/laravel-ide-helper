@@ -1,6 +1,6 @@
 <?php
 /**
- * @param int $a
- * @param int $b
- *               ABC
+ * @param  int  $a
+ * @param  int  $b
+ *                  ABC
  */

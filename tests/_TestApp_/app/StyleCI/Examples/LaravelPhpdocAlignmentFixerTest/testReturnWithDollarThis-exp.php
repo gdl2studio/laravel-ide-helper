@@ -1,5 +1,5 @@
 <?php
     /**
-     * @param  Foo   $foo
+     * @param  Foo  $foo
      * @return $this
      */

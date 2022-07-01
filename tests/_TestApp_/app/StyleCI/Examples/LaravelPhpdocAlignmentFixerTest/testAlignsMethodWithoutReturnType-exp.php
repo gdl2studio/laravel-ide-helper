@@ -1,6 +1,6 @@
 <?php
     /**
-     * @property string $foo  Desc
-     * @method   int    foo() Description
-     * @method          bar() Descrip
+     * @property string $foo Desc
+     * @method int foo() Description
+     * @method bar() Descrip
      */
