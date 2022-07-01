@@ -1,4 +1,4 @@
 <?php
-	/**
-	 * @type Type This is a variable.
-	 */
+    /**
+     * @type Type This is a variable.
+     */
