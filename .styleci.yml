@@ -2,8 +2,11 @@ risky: false
 version: 8
 preset: psr1
 enabled:
+#  - laravel_braces
   - laravel_phpdoc_alignment
 finder:
+  path:
+    - "tests"
   exclude:
     - "storage"
     - "vendor"
