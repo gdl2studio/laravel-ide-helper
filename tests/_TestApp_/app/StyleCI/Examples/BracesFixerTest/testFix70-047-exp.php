@@ -1,5 +1,4 @@
 <?php
-$foo = new class () extends \Exception
-{
+$foo = new class () extends \Exception {
     protected $message = "Surprise";
 };

@@ -1,4 +1,3 @@
 <?php
-    filter(function   ($b)
-    {
+    filter(function   ($b) {
     });

@@ -1,3 +1,2 @@
 <?php
-$foo = new class()
-{}; // comment
+$foo = new class() {}; // comment

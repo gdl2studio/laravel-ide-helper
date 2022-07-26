@@ -1,3 +1,2 @@
 <?php
-    $callback = function ()
-    { return true; };
+    $callback = function () { return true; };

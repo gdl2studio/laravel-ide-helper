@@ -2,7 +2,6 @@
 
 function & lambda()
 {
-    return function ()
-    {
+    return function () {
     };
 }

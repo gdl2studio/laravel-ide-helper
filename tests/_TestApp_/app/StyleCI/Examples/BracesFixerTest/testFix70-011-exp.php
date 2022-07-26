@@ -2,8 +2,7 @@
     function foo($a)
     {
         // foo
-        $foo = new class($a) extends Foo
-        {
+        $foo = new class($a) extends Foo {
             public function bar()
             {
             }

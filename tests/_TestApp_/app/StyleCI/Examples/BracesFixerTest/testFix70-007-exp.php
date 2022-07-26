@@ -1,11 +1,9 @@
 <?php
-    $a = function (int $foo): string
-    {
+    $a = function (int $foo): string {
         echo $foo;
     };
 
-    $b = function (int $foo) use ($bar): string
-    {
+    $b = function (int $foo) use ($bar): string {
         echo $foo . $bar;
     };
 

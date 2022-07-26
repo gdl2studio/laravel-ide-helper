@@ -1,3 +1,2 @@
-<?php $message = (new class()
-{
+<?php $message = (new class() {
 });

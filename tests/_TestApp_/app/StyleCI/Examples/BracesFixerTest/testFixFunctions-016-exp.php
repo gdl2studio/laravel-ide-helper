@@ -1,5 +1,4 @@
 <?php
-    filter(function ()
-    {
+    filter(function () {
         return true;
     });

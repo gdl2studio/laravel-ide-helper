@@ -1,5 +1,4 @@
 <?php
-    $foo = function ($x) use ($y)
-    { // foo
+    $foo = function ($x) use ($y) { // foo
         echo 1;
     };

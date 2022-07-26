@@ -1,6 +1,5 @@
 <?php
-    $callback = function ()
-    {
+    $callback = function () {
         if ($a) {
             return true;
         }
