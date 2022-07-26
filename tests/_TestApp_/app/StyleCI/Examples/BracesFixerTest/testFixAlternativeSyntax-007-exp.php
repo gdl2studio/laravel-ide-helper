@@ -1,0 +1,1 @@
+<?php if ($a): elseif ($b): for (;;): ?> X <?php endfor; endif; ?>
