@@ -1,4 +1,4 @@
 <?php
     $callback = function () {
-        return true;
+    return true;
     };
