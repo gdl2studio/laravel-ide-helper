@@ -1,1 +1,0 @@
-<?php switch ($a): case 1: for (;;): ?> X <?php endfor; endswitch; ?>,

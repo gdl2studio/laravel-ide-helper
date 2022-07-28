@@ -1,2 +1,0 @@
-<?php
-while ($foo->next());
